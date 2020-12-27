@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		CDBB48AD258663C5002C687F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDBB48AC258663C5002C687F /* Assets.xcassets */; };
 		CDBB48B0258663C5002C687F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDBB48AE258663C5002C687F /* LaunchScreen.storyboard */; };
 		CDBB48B825889DC9002C687F /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB48B725889DC9002C687F /* InputViewController.swift */; };
+		CDBB48BA258B66C6002C687F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB48B9258B66C6002C687F /* Task.swift */; };
 		FC661B0813C5B568AEB297DD /* Pods_taskapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307CE20E12A2C1D09DAB2904 /* Pods_taskapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		CDBB48AF258663C5002C687F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDBB48B1258663C5002C687F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDBB48B725889DC9002C687F /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		CDBB48B9258B66C6002C687F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,6 @@
 				9469A049DDF66C68034E8EA5 /* Pods-taskapp.debug.xcconfig */,
 				3481D4D842280759F9F4C979 /* Pods-taskapp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +89,7 @@
 				CDBB48A7258663C2002C687F /* ViewController.swift */,
 				CDBB48B725889DC9002C687F /* InputViewController.swift */,
 				CDBB48A9258663C2002C687F /* Main.storyboard */,
+				CDBB48B9258B66C6002C687F /* Task.swift */,
 				CDBB48AC258663C5002C687F /* Assets.xcassets */,
 				CDBB48AE258663C5002C687F /* LaunchScreen.storyboard */,
 				CDBB48B1258663C5002C687F /* Info.plist */,
@@ -212,6 +214,7 @@
 			files = (
 				CDBB48A8258663C2002C687F /* ViewController.swift in Sources */,
 				CDBB48A4258663C2002C687F /* AppDelegate.swift in Sources */,
+				CDBB48BA258B66C6002C687F /* Task.swift in Sources */,
 				CDBB48A6258663C2002C687F /* SceneDelegate.swift in Sources */,
 				CDBB48B825889DC9002C687F /* InputViewController.swift in Sources */,
 			);
