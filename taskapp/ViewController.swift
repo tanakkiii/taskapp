@@ -25,7 +25,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // 以降内容をアップデートするとリスト内は自動的に更新される。
     var taskArray = try! Realm().objects(Task.self).sorted(byKeyPath:"date", ascending: true)
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -40,7 +39,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // データの数（＝セルの数）を返すメソッド
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return taskArray.count
+            return taskArray.count
+        
     }
     
     // 各セルの内容を返すメソッド
@@ -137,13 +137,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let result = realm.objects(Task.self).filter("category CONTAINS '\(searchText)'")
         
         // 検索結果の件数を取得
-        let count = result.count
+        taskArray = result
         
-        if (count == 0){
-            taskArray = realm.objects(Task.self)
-        } else {
-            taskArray = result
-        }
+        
         tableView.reloadData()
     }
     
@@ -151,6 +147,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         searchBar.setShowsCancelButton(false, animated: true)
+        searchBar.text = ""
+        taskArray = realm.objects(Task.self)
+        tableView.reloadData()
     }
     
     // 検索バー編集開始時にキャンセルボタン有効化
